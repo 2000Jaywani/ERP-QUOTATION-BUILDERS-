@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@500&display=swap");
+
+.registration-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #e5dddd, #68ebf7);
+  font-family: "Poppins", sans-serif;
+  padding: 10px;
+}
+
+.registration-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 380px;
+  padding: 34px 26px;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registration-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Gradient Title */
+.title-gradient {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #007bff, #00c4cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 28px;
+  letter-spacing: 1px;
+}
+
+/* Input Group */
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  padding: 0 12px;
+  margin-bottom: 16px;
+  height: 45px;
+  box-shadow: 0 2px 5px rgba(13, 110, 253, 0.05);
+  transition: all 0.2s ease;
+}
+
+.input-group:focus-within {
+  border-color: #0d6efd;
+  box-shadow: 0 0 6px rgba(13, 110, 253, 0.2);
+  background: #ffffff;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0d6efd;
+  font-size: 1.1rem;
+  width: 32px;
+  height: 100%;
+}
+
+.input-group input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.95rem;
+  color: #495057;
+  padding-left: 6px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Glowing Button */
+.glow-button {
+  width: 100%;
+  height: 45px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #007bff, #00c4cc);
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.25);
+}
+
+.glow-button:hover {
+  background: linear-gradient(90deg, #0069d9, #00aab4);
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.35);
+}
+
+/* Footer Text */
+.text-small {
+  font-size: 0.8rem;
+  color: #6c757d;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.link-text {
+  color: #0d6efd;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.link-text:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .registration-card {
+    max-width: 92%;
+    padding: 24px 18px;
+  }
+
+  .title-gradient {
+    font-size: 1.4rem;
+  }
+
+  .input-group {
+    height: 42px;
+  }
+
+  .glow-button {
+    height: 42px;
+    font-size: 0.9rem;
+  }
+}

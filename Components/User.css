@@ -1,0 +1,366 @@
+/* =========================
+   MAIN CONTAINER
+========================= */
+.user-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px;
+  background-color: #ffffff;
+  min-height: 100vh;
+  gap: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* =========================
+   LEFT COLUMN (FORM)
+========================= */
+.user-form {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  border: 1px solid #e0e6ed;
+}
+
+.form-title {
+  color: #007bff;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* =========================
+   FORM ELEMENTS
+========================= */
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s;
+  font-size: 15px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
+}
+
+.form-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #007bff, #00b4d8);
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.03);
+  background: linear-gradient(135deg, #0069d9, #0096c7);
+}
+
+/* =========================
+   RIGHT COLUMN (TABLE)
+========================= */
+.user-table {
+  flex: 2;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  border: 1px solid #e0e6ed;
+}
+
+.table-title {
+  color: #007bff;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* =========================
+   SEARCH BOX
+========================= */
+.search-box {
+  margin-bottom: 15px;
+  text-align: right;
+}
+
+.search-box input {
+  width: 35%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.search-box input:focus {
+  border-color: #007bff;
+}
+
+/* =========================
+   TABLE STYLING
+========================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #007bff;
+  color: white;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #f1f5ff;
+}
+
+/* Highlighted Text */
+.highlight {
+  background-color: #c8f7c5;
+  font-weight: 600;
+  color: #1e7e34;
+  border-radius: 3px;
+  padding: 0 2px;
+}
+
+/* =========================
+   TABLE BUTTONS
+========================= */
+.user-table table button {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff;
+  font-size: 14px;
+  min-width: 80px;
+  margin: 0 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Edit button - Green with softer hover */
+.user-table table button.edit-btn {
+  background: linear-gradient(135deg, #28a745, #56d364);
+  box-shadow: 0 2px 4px rgba(40, 167, 69, 0.25);
+}
+
+.user-table table button.edit-btn:hover {
+  background: linear-gradient(135deg, #219a48, #43c85e);
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(40, 167, 69, 0.35);
+}
+
+/* Delete button - Red */
+.user-table table button.delete-btn {
+  background: linear-gradient(135deg, #dc3545, #f87171);
+  box-shadow: 0 2px 4px rgba(220, 53, 69, 0.25);
+}
+
+.user-table table button.delete-btn:hover {
+  background: linear-gradient(135deg, #c82333, #ef4444);
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(220, 53, 69, 0.35);
+}
+
+/* =========================
+   POPUP MODAL DESIGN (WHITE ONLY)
+========================= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent; /* no black overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* White Popup Window */
+.modal-popup {
+  background: #ffffff;
+  border-radius: 16px;
+  width: 420px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  animation: zoomIn 0.25s ease;
+  border: 1px solid #d6e0f0;
+}
+
+.modal-popup h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff;
+  font-weight: 600;
+}
+
+.modal-popup .form-group {
+  margin-bottom: 15px;
+}
+
+.modal-popup .form-group input,
+.modal-popup .form-group select {
+  width: 100%;
+  font-size: 15px;
+  border-radius: 6px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.modal-popup .form-group input:focus,
+.modal-popup .form-group select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+/* Save Button */
+.btn-save {
+  background: linear-gradient(135deg, #28a745, #43c85e);
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-save:hover {
+  background: linear-gradient(135deg, #219a48, #3bb556);
+  transform: scale(1.05);
+}
+
+/* Close Button */
+.btn-close {
+  background: linear-gradient(135deg, #dc3545, #ef4444);
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-close:hover {
+  background: linear-gradient(135deg, #c82333, #f56565);
+  transform: scale(1.05);
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 992px) {
+  .user-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .user-form,
+  .user-table {
+    width: 100%;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  .modal-popup {
+    width: 90%;
+  }
+}
+
+
+
+
+/* Highlighted Text */
+.highlight {
+  background-color: #c8f7c5; /* Green */
+  color: #1e7e34;
+  font-weight: 600;
+  border-radius: 3px;
+  padding: 0 2px;
+}
+
+/* Search Box */
+.search-box {
+  margin-bottom: 15px;
+  text-align: right;
+}
+
+.search-box input {
+  width: 30%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.search-box input:focus {
+  border-color: #007bff;
+}

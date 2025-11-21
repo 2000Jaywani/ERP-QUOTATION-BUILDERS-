@@ -1,0 +1,192 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ===== Background Section ===== */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  /* ✅ HD Industrial Office Background */
+  background-image: url("https://images.unsplash.com/photo-1715593949273-09009558300a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b2ZmaWNlJTIwaW50ZXJpb3J8ZW58MHx8MHx8fDA%3D&fm=jpg&q=60&w=3000");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+   /* ✅ Glow Enhancement */
+  filter: brightness(1.15) contrast(1.1) saturate(1.25);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✅ Subtle overlay for readability without blur */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 35, 0.55);
+  z-index: 0;
+}
+
+/* ===== Card Section ===== */
+.login-card {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.9);
+  width: 400px;
+  max-width: 90%;
+  padding: 40px 35px;
+  border-radius: 18px;
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+  transition: transform 0.3s ease;
+}
+
+.login-card:hover {
+  transform: translateY(-6px);
+}
+
+/* ===== Title ===== */
+.login-title {
+  color: #3e1bdb;
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin-bottom: 28px;
+  letter-spacing: 1px;
+}
+
+/* ===== Form Inputs ===== */
+.input-wrapper {
+  margin-bottom: 22px;
+  text-align: left;
+}
+
+.input-wrapper label {
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  background: #f6f6f9;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px 14px;
+  transition: all 0.3s ease;
+}
+
+.input-box:focus-within {
+  border-color: #3e1bdb;
+  box-shadow: 0 0 8px rgba(62, 27, 219, 0.3);
+}
+
+.input-icon {
+  color: #3e1bdb;
+  font-size: 1.1rem;
+  margin-right: 10px;
+}
+
+.input-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.95rem;
+  color: #333;
+  padding: 4px;
+}
+
+/* ===== Button ===== */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #3e1bdb, #6a4fe0);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(62, 27, 219, 0.3);
+}
+
+.login-btn:hover {
+  background: linear-gradient(90deg, #6a4fe0, #3e1bdb);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(62, 27, 219, 0.4);
+}
+
+/* ===== Register Text ===== */
+.register-text {
+  margin-top: 18px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.register-link {
+  color: #3e1bdb;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.register-link:hover {
+  color: #2a0fb8;
+  text-decoration: underline;
+}
+
+/* ===== Animation ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+  .login-card {
+    width: 90%;
+    padding: 30px 25px;
+  }
+
+  .login-title {
+    font-size: 1.5rem;
+  }
+
+  .input-box input {
+    font-size: 0.9rem;
+  }
+
+  .login-btn {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+}
